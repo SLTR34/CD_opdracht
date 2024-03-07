@@ -1,0 +1,6 @@
+- name: Debug
+  run: |
+    echo "Host: ${{ secrets.HOST }}"
+    echo "Username: ${{ secrets.USERNAME }}"
+    echo "SSH Key: ${{ secrets.SSHKEY }}"
+    cat github_deploy_key  # Make sure this is the private key
