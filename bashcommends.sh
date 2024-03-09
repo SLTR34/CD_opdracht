@@ -1,5 +1,5 @@
 ls
-cd /home/farm-site/
+cd /farm/
 cat main.py
 git pull
 systemctl restart farm
