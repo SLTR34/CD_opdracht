@@ -2,7 +2,7 @@ name: Checkout_workspace
 
 on: workflow_dispatch
 jobs:
-  checkout_respistory
+  checkout_respistory:
     runs-on: ubuntu-20.04
     steps:
       - name: Chekout repository
