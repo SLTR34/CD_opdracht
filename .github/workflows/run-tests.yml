@@ -26,8 +26,7 @@ jobs:
       - name: Deploy to DigitalOcean
         uses: appleboy/ssh-action@master
         with:
-          agent: true
-          HOST: ${{ secrets.HOST }}
+          HOST: ${{ secrets.HOST}}
           port: ${{ secrets.port}}
           USERNAME: ${{ secrets.USERNAME}}
           KEY: ${{ secrets.SSHKEY}}
