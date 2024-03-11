@@ -26,10 +26,10 @@ jobs:
       - name: Deploy to DigitalOcean
         uses: appleboy/ssh-action@master
         with:
-          HOST: ${{ secrets.HOST}}
+          host: ${{ secrets.HOST}}
           port: ${{ secrets.port}}
-          USERNAME: ${{ secrets.USERNAME}}
-          KEY: ${{ secrets.SSHKEY}}
+          username: ${{ secrets.USERNAME}}
+          key: ${{ secrets.SSHKEY}}
           script: |
             cd /farm/bashcommends.sh
             whoami
