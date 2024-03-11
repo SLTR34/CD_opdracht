@@ -31,5 +31,5 @@ jobs:
           USERNAME: ${{ secrets.USERNAME}}
           SSHKEY: ${{ secrets.SSHKEY}}
           script: |
-            sh.bashcommends.sh
+            cd /farm/bashcommends.sh
            
