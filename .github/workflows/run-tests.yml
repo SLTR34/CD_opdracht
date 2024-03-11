@@ -30,7 +30,7 @@ jobs:
           HOST: ${{ secrets.HOST }}
           port: ${{ secrets.port}}
           USERNAME: ${{ secrets.USERNAME}}
-          SSHKEY: ${{ secrets.SSHKEY}}
+          KEY: ${{ secrets.SSHKEY}}
           script: |
             cd /farm/bashcommends.sh
            
