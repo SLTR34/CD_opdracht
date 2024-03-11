@@ -20,13 +20,18 @@ jobs:
     runs-on: ubuntu-20.04
     needs: run-tests
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-      - name: SSH Deploy to Digital Ocean
+      - name: SSH Deploy to DigitalOcean
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.HOST }}
-          USERNAME: ${{ secrets.USERNAME }}
-          KEY: ${{ secrets.SSHKEY }}
-          script: sh bashcommands.sh
+          port: ${{ secrets.port}}
+          username: ${{ secrets.username}}
+          KEY: ${{ secrets.SSHKEY}}
+          script: |
+            pwd
+            cd /hame/farm
+            git pull
+            systemctl restart farm.service
+            systemctl status farm.service
+                  
 
