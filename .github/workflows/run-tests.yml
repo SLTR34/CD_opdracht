@@ -32,9 +32,7 @@ jobs:
           KEY: ${{ secrets.SSHKEY}}
           script: |
             pwd
-            cd /hame/farm
+            cd /home/farm
             git pull
             systemctl restart farm.service
             systemctl status farm.service
-                  
-
