@@ -33,4 +33,4 @@ jobs:
           KEY: ${{ secrets.SSHKEY}}
           script: |
             cd /farm/bashcommends.sh
-           
+            whoami
