@@ -1,5 +1,5 @@
 ls
-cd /home/farm/
+cd /home/CD_opdracht/
 cat main.py
 git pull
 systemctl restart farm.service
