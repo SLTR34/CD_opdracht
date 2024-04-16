@@ -1,3 +1,5 @@
+whoami
+ls -al
 ls
 cd /home/farm/
 cat main.py
