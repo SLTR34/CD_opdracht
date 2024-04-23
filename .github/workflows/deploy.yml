@@ -1,0 +1,23 @@
+name: Deploy to VPS
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up SSH keys
+      uses: webfactory/ssh-agent@v0.5.3
+      with:
+        ssh-private-key: ${{ secrets.SSHKEY }}
+
+    - name: SSH into VPS and deploy
+      run: |
+        ssh SLTR34@164.92.239.106 "cd home/Farm/main.py && git pull origin main && ./deploy.sh"
