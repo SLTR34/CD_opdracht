@@ -19,18 +19,12 @@ jobs:
       - name: Run tests
         run: pytest
 
-  build:
-    runs-on: ubuntu-20.04
-    needs: run-tests
-    steps:
-      - name: Deploy to DigitalOcean
-        uses: appleboy/ssh-action@master
+      - name: Set up SSH keys
+        uses: webfactory/ssh-agent@v0.5.3
         with:
-          host: ${{ secrets.HOST}}
-          port: ${{ secrets.port}}
-          username: ${{ secrets.USERNAME}}
-          key: ${{ secrets.SSHKEY}}
-          script:  sh.bashcommends.sh
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      script:  sh.bashcommends.sh
           
             
           
