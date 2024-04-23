@@ -1,7 +1,7 @@
 whoami
 ls -al
 ls
-cd /home/farm
+cd home/Farm
 cat main.py
 git pull
 systemctl restart farm.service
