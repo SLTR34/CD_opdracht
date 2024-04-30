@@ -30,7 +30,7 @@ jobs:
           key: ${{ secrets.SSHKEY}}
           username: ${{ secrets.username}}
           port: ${{ secrets.port}}
-          script:  sh.bashcommends.sh
+          script:  sh bashcommends.sh
           
             
           
