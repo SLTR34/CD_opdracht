@@ -27,7 +27,9 @@ jobs:
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.HOST}}
-          key: ${{ secrets.SSH_PRIVATE_KEY}}
+          key: ${{ secrets.SSHKEY}}
+          username: ${{ secrets.username}}
+          port: ${{ secrets.port}}
           script:  sh.bashcommends.sh
           
             
