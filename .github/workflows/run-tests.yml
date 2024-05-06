@@ -31,7 +31,14 @@ jobs:
           username: ${{ secrets.username}}
           port: ${{ secrets.port}}
           run: echo $GITHUB_WORKSPACE
-          script:  bashcommends.sh
+          script: |
+                  pwd
+                  cd /home/Farm/
+                  cat main.py
+                  git pull
+                  systemctl restart farm.service
+                  systemctl status farm.service
+                  pwd  
           
             
           
