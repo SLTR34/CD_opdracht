@@ -30,6 +30,7 @@ jobs:
           key: ${{ secrets.SSHKEY}}
           username: ${{ secrets.username}}
           port: ${{ secrets.port}}
+          run: echo $GITHUB_WORKSPACE
           script:  bashcommends.sh
           
             
