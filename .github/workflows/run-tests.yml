@@ -27,15 +27,9 @@ jobs:
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.HOST}}
+          username: ${{ secrets.USERNAME}}
           key: ${{ secrets.SSHKEY}}
-          username: ${{ secrets.username}}
-          port: ${{ secrets.port}}
+          port: ${{ secrets.PORT}}
           script: |
-                    pwd
-                    cd /home/Farm/
-                    cat main.py
-                    git pull
-                    systemctl restart farm.service
-                    systemctl status farm.service
-                    pwd
+                    whoami
           
