@@ -1,7 +1,5 @@
-pwd
-cd /home/Farm/bashcommends.sh
-cat main.py
-git pull
-systemctl restart farm.service
-systemctl status farm.service
-pwd 
+        cd /farm
+        git pull
+        source venv/bin/activate
+        pip install -r requirements.txt
+        sudo systemctl restart flaskapp
