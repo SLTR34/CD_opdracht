@@ -4,3 +4,4 @@
         pip install -r requirements.txt
         sudo systemctl restart flaskapp
         systemctl status flaskapp
+        systemctl status flaskapp
