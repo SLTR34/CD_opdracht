@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
 
     steps:
@@ -28,6 +28,12 @@ jobs:
       run: |
         pytest
 
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+      
+    steps:
     - name: Deploy to VPS
       if: success()
       uses: appleboy/ssh-action@master
@@ -38,6 +44,7 @@ jobs:
         script: |
           cd home/farm
           git pull
+          python3 -m venv venv
           source venv/bin/activate
           pip install -r requirements.txt
           sudo systemctl restart flaskapp
