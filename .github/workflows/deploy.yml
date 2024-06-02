@@ -29,7 +29,6 @@ jobs:
 
     - name: Run tests
       run: |
-        cd /farm/
         source venv/bin/activate
         pytest
 
