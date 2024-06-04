@@ -57,5 +57,7 @@ jobs:
           source venv/bin/activate
           pip install -r requirements.txt
           systemctl restart flaskapp
+          systemctl restart nginx
           systemctl status flaskapp
+          systemctl status nginx
           EOF
