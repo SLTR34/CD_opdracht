@@ -57,4 +57,4 @@ jobs:
           systemctl restart nginx
           systemctl status flaskapp
           systemctl status nginx
-          EOF
+          
